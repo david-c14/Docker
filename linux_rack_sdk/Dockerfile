@@ -1,12 +1,9 @@
-FROM ubuntu:16.04
+FROM linux_platform:16_04
 
-LABEL "name"="VCVRack builder for linux"
+LABEL "name"="VCVRack sdk for linux"
 
 ENV WORKDIR /usr/src/app
 WORKDIR /usr/src/app
-
-RUN apt-get update
-RUN apt-get install -y build-essential cmake curl gcc g++ git make tar unzip zip libgl1-mesa-dev libglu1-mesa-dev jq
 
 ADD entrypoint.sh entrypoint.sh
 RUN chmod a+x entrypoint.sh

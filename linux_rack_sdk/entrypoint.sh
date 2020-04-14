@@ -8,3 +8,6 @@ export RACK_USER_DIR=${WORKDIR}
 cd plugin
 make clean
 make dist
+cp dist/*.zip .
+chmod 664 *.zip
+make clean

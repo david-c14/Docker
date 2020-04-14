@@ -12,3 +12,6 @@ export STRIP=x86_64-w64-mingw32-strip
 cd plugin
 make clean
 make dist
+cp dist/*.zip .
+chmod 664 *.zip
+make clean
